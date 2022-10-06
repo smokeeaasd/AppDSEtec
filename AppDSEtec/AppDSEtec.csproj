@@ -16,11 +16,22 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Inicial.xaml">
+    <EmbeddedResource Update="View\Inicial.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Menu.xaml">
+    <EmbeddedResource Update="View\Menus\MenuInicial.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="View\Icons\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="View\Menus\MenuInicial.xaml.cs">
+      <DependentUpon>MenuInicial.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

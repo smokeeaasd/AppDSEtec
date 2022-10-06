@@ -14,7 +14,7 @@ namespace AppDSEtec
         {
             InitializeComponent();
 
-            Detail = new NavigationPage(new Inicial());
+            Detail = new NavigationPage(new View.Inicial());
         }
     }
 }

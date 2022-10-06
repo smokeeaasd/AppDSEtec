@@ -7,14 +7,19 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppDSEtec.Views
+namespace AppDSEtec.View.Menus
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Menu : ContentPage
+    public partial class MenuInicial : ContentPage
     {
-        public Menu()
+        public MenuInicial()
         {
             InitializeComponent();
+        }
+
+        private void Inicial_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Oi", "oi", "oi");
         }
     }
 }

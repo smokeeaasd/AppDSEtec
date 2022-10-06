@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:local="clr-namespace:AppDSEtec.Views"
+            xmlns:menus="clr-namespace:AppDSEtec.View.Menus"
             x:Class="AppDSEtec.MainPage">
     <FlyoutPage.Flyout>
-        <local:Menu/>
+        <menus:MenuInicial/>
     </FlyoutPage.Flyout>
 
     <FlyoutPage.Detail>
