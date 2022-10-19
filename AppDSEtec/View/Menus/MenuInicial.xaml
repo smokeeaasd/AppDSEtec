@@ -1,16 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppDSEtec.View.Menus.MenuInicial"       
-             Title="Menu">
-    <ContentPage.Content>
-        <StackLayout>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="42"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-            </Grid>
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="AppDSEtec.View.Menus.MenuInicial"
+             xmlns:local="clr-namespace:AppDSEtec"
+             xmlns:pages="clr-namespace:AppDSEtec.View.Pages">
+    <StackLayout BackgroundColor="#1d2129">
+        <ListView x:Name="listView" x:FieldModifier="public">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type local:FlyoutItemPage}">
+                    <local:FlyoutItemPage Titulo="Inicial" TargetType="{x:Type pages:Inicial}"/>
+                    <local:FlyoutItemPage Titulo="Primeiro Módulo" TargetType="{x:Type pages:PrimeiroModulo}"/>
+                    <local:FlyoutItemPage Titulo="Segundo Módulo" TargetType="{x:Type pages:SegundoModulo}"/>
+                    <local:FlyoutItemPage Titulo="Terceiro Módulo" TargetType="{x:Type pages:TerceiroModulo}"/>
+                </x:Array>
+            </ListView.ItemsSource>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Button Grid.Column="1" Text="{Binding Titulo}" Style="{StaticResource LabelButton}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

@@ -13,8 +13,19 @@ namespace AppDSEtec
         public MainPage()
         {
             InitializeComponent();
+            flyout.listView.ItemSelected += OnSelectedItem;
+        }
 
-            Detail = new NavigationPage(new View.Inicial());
+        private void OnSelectedItem(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem as FlyoutItemPage;
+
+            if (item != null)
+            {
+                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                flyout.listView.SelectedItem = null;
+                IsPresented = false;
+            }
         }
     }
 }

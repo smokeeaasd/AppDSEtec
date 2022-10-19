@@ -16,11 +16,4 @@
     <!--<item name="colorAccent">#FF4081</item>-->
 	  
   </style>
-
-	<style name="Theme.Splash" parent="android:Theme">
-		<item name="android:windowBackground">@drawable/mysticaltree</item>
-		<item name="android:windowNoTitle">true</item>
-		<item name="android:windowFullscreen">true</item>
-		<item name="colorPrimaryDark">#313131</item>
-	</style>
 </resources>

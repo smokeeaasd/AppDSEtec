@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppDSEtec.View
+namespace AppDSEtec.View.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Inicial : ContentPage

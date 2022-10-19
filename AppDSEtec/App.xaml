@@ -3,15 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppDSEtec.App">
     <Application.Resources>
-        <Style x:Key="GradientBackground" TargetType="StackLayout">
-            <Setter Property="Background">
-                <Setter.Value>
-                    <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
-                        <GradientStop Color="#521eb3" Offset="0.1"/>
-                        <GradientStop Color="#1eb1b3" Offset="1.0"/>
-                    </LinearGradientBrush>
-                </Setter.Value>
-            </Setter>
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#521EB3"/>
+            <Setter Property="BarTextColor" Value="#eee"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="LabelButton">
+            <Setter Property="TextTransform" Value="None"/>
+            <Setter Property="BackgroundColor" Value="#16a1d9"/>
+            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextColor" Value="#eee"/>
         </Style>
     </Application.Resources>
 </Application>
