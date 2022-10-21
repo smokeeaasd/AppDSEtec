@@ -8,12 +8,22 @@
             <Setter Property="BarTextColor" Value="#eee"/>
         </Style>
 
-        <Style TargetType="Button" x:Key="LabelButton">
+        <Style TargetType="Label" x:Key="LabelButton">
             <Setter Property="TextTransform" Value="None"/>
-            <Setter Property="BackgroundColor" Value="#16a1d9"/>
+            <Setter Property="BackgroundColor" Value="#521EB3"/>
             <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-            <Setter Property="FontSize" Value="18"/>
-            <Setter Property="TextColor" Value="#eee"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="TextColor" Value="#fff"/>
+            <Setter Property="FontFamily" Value="EpilogueRegular"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="LabelTitle">
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="TextColor" Value="#111"/>
         </Style>
     </Application.Resources>
 </Application>

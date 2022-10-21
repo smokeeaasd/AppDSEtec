@@ -5,6 +5,7 @@
              Title="Inicial">
     <ContentPage.Content>
         <StackLayout>
+            <Label FontFamily="UbuntuMedium" Text="Etec DS" Style="{StaticResource LabelTitle}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

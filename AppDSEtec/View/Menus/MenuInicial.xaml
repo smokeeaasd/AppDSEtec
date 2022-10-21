@@ -4,7 +4,7 @@
              x:Class="AppDSEtec.View.Menus.MenuInicial"
              xmlns:local="clr-namespace:AppDSEtec"
              xmlns:pages="clr-namespace:AppDSEtec.View.Pages">
-    <StackLayout BackgroundColor="#1d2129">
+    <StackLayout BackgroundColor="#eee">
         <ListView x:Name="listView" x:FieldModifier="public">
             <ListView.ItemsSource>
                 <x:Array Type="{x:Type local:FlyoutItemPage}">
@@ -19,7 +19,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <Button Grid.Column="1" Text="{Binding Titulo}" Style="{StaticResource LabelButton}"/>
+                            <Label Grid.Column="1" Text="{Binding Titulo}" Style="{StaticResource LabelButton}"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
