@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDSEtec.NotAllowed">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Style="{StaticResource GradientBG}">
+                
+                <Label Text=":("
+                       FontSize="250"
+                       TextColor="#eee"
+                       FontFamily="UbuntuMedium"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+                
+                <Label Text="Parece você não habilitou as permissões de localização, com isso, não podemos ver o tempo para você."
+                       HorizontalTextAlignment="Center"
+                       FontFamily="EpilogueRegular"
+                       TextColor="#eee"
+                       FontSize="20"
+                       Margin="30"/>
+                
+                <Label Text="Se você habilitou as permissões, feche o app e abra novamente."
+                       HorizontalTextAlignment="Center"
+                       FontFamily="EpilogueRegular"
+                       TextColor="#eee"
+                       FontSize="20"
+                       Margin="30"/>
+
+                <Button Text="Permissões"
+                        BackgroundColor="Transparent"
+                        TextTransform="None"
+                        FontFamily="EpilogueRegular"
+                        FontSize="30"
+                        BorderColor="White"
+                        BorderWidth="1"
+                        CornerRadius="30"
+                        HorizontalOptions="Center"
+                        Padding="20, 5, 20, 5"
+                        Clicked="ShowPermissoes_Clicked"/>
+
+                <Label Text="Permissões > Localização > Permitir"
+                       HorizontalTextAlignment="Center"
+                       FontFamily="EpilogueRegular"
+                       TextColor="#eee"
+                       FontSize="20"
+                       Margin="10, 25, 0, 0"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

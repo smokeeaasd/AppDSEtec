@@ -10,13 +10,9 @@
                 <Label Style="{StaticResource LabelTitle}"
                    x:Name="lblTitulo"
                    Margin="20, 20, 0, 0"/>
-                <Label Style="{StaticResource LabelSubtitle}"
+            <Label Style="{StaticResource LabelSubtitle}"
                     Text="um simples projeto do lucas :)"
                     Margin="20, 0, 0, 0"/>
-
-            <Grid>
-                
-            </Grid>
-            </StackLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

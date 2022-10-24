@@ -1,21 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppDSEtec.View.Menus.MenuInicial"
-             xmlns:pages="clr-namespace:AppDSEtec.View.Pages"
-             xmlns:controls="clr-namespace:AppDSEtec.Controls">
+             x:Class="AppDSEtec.View.Menus.MenuInicial">
     <StackLayout x:Name="InicialStackLayout" x:FieldModifier="public" Margin="5, 5, 5, 5">
-        <controls:TargetButton Text="Inicial"
-            TargetPage="{x:Type pages:Inicial}"
-            x:FieldModifier="public"/>
-        
-        <controls:TargetButton Text="Primeiro ano"
-            TargetPage="{x:Type pages:PrimeiroModulo}"
-            x:FieldModifier="public"/>
-
-        <controls:TargetButton Text="Segundo ano"
-            TargetPage="{x:Type pages:SegundoModulo}"
-            x:FieldModifier="public"/>
         
     </StackLayout>
 </ContentPage>

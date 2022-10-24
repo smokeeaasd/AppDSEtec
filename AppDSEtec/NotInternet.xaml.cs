@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppDSEtec.View.Pages
+namespace AppDSEtec
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SegundoModulo : ContentPage
+    public partial class NotInternet : ContentPage
     {
-        public SegundoModulo()
+        public NotInternet()
         {
             InitializeComponent();
         }

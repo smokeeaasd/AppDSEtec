@@ -19,8 +19,6 @@ namespace AppDSEtec.View.Pages
         {
             InitializeComponent();
 
-            var location = Geolocation.GetLastKnownLocationAsync().Result;
-
             ushort horas = Convert.ToUInt16(DateTime.Now.Hour);
 
             if (horas >= 6 && horas <= 12)
