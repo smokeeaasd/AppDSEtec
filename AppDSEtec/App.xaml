@@ -1,29 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppDSEtec.App">
+             x:Class="AppDSEtec.App"
+             xmlns:controls="clr-namespace:AppDSEtec.Controls">
     <Application.Resources>
+
+        <Style TargetType="StackLayout" x:Key="GradientBG">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="1, 1" EndPoint="0, 0">
+                        <GradientStop Color="#13072E" Offset="0"/>
+                        <GradientStop Color="#4C2580" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor" Value="#521EB3"/>
             <Setter Property="BarTextColor" Value="#eee"/>
         </Style>
 
-        <Style TargetType="Label" x:Key="LabelButton">
-            <Setter Property="TextTransform" Value="None"/>
+        <Style TargetType="controls:TargetButton">
             <Setter Property="BackgroundColor" Value="#521EB3"/>
-            <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="HeightRequest" Value="50"/>
-            <Setter Property="VerticalTextAlignment" Value="Center"/>
-            <Setter Property="HorizontalTextAlignment" Value="Center"/>
-            <Setter Property="TextColor" Value="#fff"/>
+            <Setter Property="CornerRadius" Value="10"/>
             <Setter Property="FontFamily" Value="EpilogueRegular"/>
+            <Setter Property="TextTransform" Value="None"/>
+            <Setter Property="HeightRequest" Value="64"/>
+            <Setter Property="FontSize" Value="20"/>
         </Style>
 
         <Style TargetType="Label" x:Key="LabelTitle">
-            <Setter Property="HorizontalTextAlignment" Value="Center"/>
-            <Setter Property="FontSize" Value="50"/>
-            <Setter Property="TextColor" Value="#111"/>
+            <Setter Property="FontFamily" Value="UbuntuMedium"/>
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="TextColor" Value="#eee"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="LabelSubtitle">
+            <Setter Property="FontFamily" Value="UbuntuMedium"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="#77bbff"/>
         </Style>
     </Application.Resources>
 </Application>

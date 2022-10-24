@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AppDSEtec.Controls;
 
 namespace AppDSEtec.View.Menus
 {
@@ -15,11 +16,6 @@ namespace AppDSEtec.View.Menus
         public MenuInicial()
         {
             InitializeComponent();
-        }
-
-        private void Inicial_Clicked(object sender, EventArgs e)
-        {
-            DisplayAlert("Oi", "oi", "oi");
         }
     }
 }

@@ -2,28 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppDSEtec.View.Menus.MenuInicial"
-             xmlns:local="clr-namespace:AppDSEtec"
-             xmlns:pages="clr-namespace:AppDSEtec.View.Pages">
-    <StackLayout BackgroundColor="#eee">
-        <ListView x:Name="listView" x:FieldModifier="public">
-            <ListView.ItemsSource>
-                <x:Array Type="{x:Type local:FlyoutItemPage}">
-                    <local:FlyoutItemPage Titulo="Inicial" TargetType="{x:Type pages:Inicial}"/>
-                    <local:FlyoutItemPage Titulo="Primeiro Módulo" TargetType="{x:Type pages:PrimeiroModulo}"/>
-                    <local:FlyoutItemPage Titulo="Segundo Módulo" TargetType="{x:Type pages:SegundoModulo}"/>
-                    <local:FlyoutItemPage Titulo="Terceiro Módulo" TargetType="{x:Type pages:TerceiroModulo}"/>
-                </x:Array>
-            </ListView.ItemsSource>
+             xmlns:pages="clr-namespace:AppDSEtec.View.Pages"
+             xmlns:controls="clr-namespace:AppDSEtec.Controls">
+    <StackLayout x:Name="InicialStackLayout" x:FieldModifier="public" Margin="5, 5, 5, 5">
+        <controls:TargetButton Text="Inicial"
+            TargetPage="{x:Type pages:Inicial}"
+            x:FieldModifier="public"/>
+        
+        <controls:TargetButton Text="Primeiro ano"
+            TargetPage="{x:Type pages:PrimeiroModulo}"
+            x:FieldModifier="public"/>
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label Grid.Column="1" Text="{Binding Titulo}" Style="{StaticResource LabelButton}"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <controls:TargetButton Text="Segundo ano"
+            TargetPage="{x:Type pages:SegundoModulo}"
+            x:FieldModifier="public"/>
+        
     </StackLayout>
 </ContentPage>

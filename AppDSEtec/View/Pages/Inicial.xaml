@@ -2,10 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppDSEtec.View.Pages.Inicial"
-             Title="Inicial">
+             Title="Desenvolvimento de Sistemas"
+             
+             BackgroundColor="Transparent">
     <ContentPage.Content>
-        <StackLayout>
-            <Label FontFamily="UbuntuMedium" Text="Etec DS" Style="{StaticResource LabelTitle}"/>
+        <StackLayout Style="{StaticResource GradientBG}">
+            <Label Style="{StaticResource LabelTitle}"
+                   x:Name="lblTitulo"
+                   Margin="20, 20, 0, 0"/>
+            <Label Style="{StaticResource LabelSubtitle}"
+                    Text="um simples projeto do lucas :)"
+                    Margin="20, 0, 0, 0"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

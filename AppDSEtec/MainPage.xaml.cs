@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+using AppDSEtec.Controls;
+
 namespace AppDSEtec
 {
     public partial class MainPage : FlyoutPage
@@ -13,19 +15,24 @@ namespace AppDSEtec
         public MainPage()
         {
             InitializeComponent();
-            flyout.listView.ItemSelected += OnSelectedItem;
+
+            foreach (Xamarin.Forms.View view in flyout.InicialStackLayout.Children.ToList())
+            {
+                if (typeof(TargetButton) == view.GetType())
+                {
+                    TargetButton botao = (TargetButton)view;
+
+                    botao.Clicked += Page_Clicked;
+                }
+            }
         }
 
-        private void OnSelectedItem(object sender, SelectedItemChangedEventArgs e)
+        private void Page_Clicked(object sender, EventArgs e)
         {
-            var item = e.SelectedItem as FlyoutItemPage;
+            TargetButton botao = (TargetButton)sender;
 
-            if (item != null)
-            {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
-                flyout.listView.SelectedItem = null;
-                IsPresented = false;
-            }
+            Detail = new NavigationPage((Page)Activator.CreateInstance(botao.TargetPage));
+            IsPresented = false;
         }
     }
 }

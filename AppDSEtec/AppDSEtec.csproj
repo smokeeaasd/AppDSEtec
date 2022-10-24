@@ -17,22 +17,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Assets\Fonts\EpilogueRegular.ttf" />
-    <None Remove="Assets\Fonts\UbuntuMedium.ttf" />
+    <None Remove="View\Assets\Fonts\EpilogueRegular.ttf" />
+    <None Remove="View\Assets\Fonts\UbuntuMedium.ttf" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Assets\Fonts\EpilogueRegular.ttf">
+    <EmbeddedResource Include="View\Assets\Fonts\EpilogueRegular.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Assets\Fonts\UbuntuMedium.ttf">
+    <EmbeddedResource Include="View\Assets\Fonts\UbuntuMedium.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="RestSharp" Version="108.0.2" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>

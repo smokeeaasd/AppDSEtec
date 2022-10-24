@@ -3,9 +3,10 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:menus="clr-namespace:AppDSEtec.View.Menus"
             xmlns:pages="clr-namespace:AppDSEtec.View.Pages"
+            xmlns:local="clr-namespace:AppDSEtec"
             x:Class="AppDSEtec.MainPage"
-            Title="Menu">
-    
+            BackgroundColor="Transparent">
+
     <FlyoutPage.Flyout>
         <menus:MenuInicial Title="Home" x:Name="flyout"/>
     </FlyoutPage.Flyout>
