@@ -38,10 +38,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="NotAllowed.xaml">
+    <EmbeddedResource Update="NotInternet.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="NotInternet.xaml">
+    <EmbeddedResource Update="SearchUser.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Menus\MenuInicial.xaml">

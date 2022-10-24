@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDSEtec.SearchUser"
+             Style="{StaticResource ContentGradientBG}">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Label Margin="0, 0, 0, 0" Text="Github Search" FontFamily="UbuntuMedium" TextColor="#eee" FontSize="32" HorizontalTextAlignment="Center"/>
+
+            <Frame BackgroundColor="#22ffffff"
+                   CornerRadius="10"
+                   Margin="20">
+                <StackLayout>
+                    <Label Text="Usuário" FontFamily="UbuntuMedium" TextColor="#eee" FontSize="28"/>
+                    <Entry FontFamily="EpilogueRegular" x:Name="entryUsuario"/>
+
+                    <Button Text="Pesquisar"
+                            TextTransform="None"
+                            TextColor="#eee"
+                            BackgroundColor="Transparent"
+                            BorderWidth="1"
+                            BorderColor="#eee"
+                            HorizontalOptions="Center"
+                            Padding="20, 0, 20, 0"
+                            FontSize="20"
+                            FontFamily="EpilogueRegular"
+                            CornerRadius="30"
+                            Clicked="Pesquisar_Usuario"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

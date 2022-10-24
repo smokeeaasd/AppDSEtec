@@ -15,6 +15,7 @@ namespace AppDSEtec
         public NotInternet()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

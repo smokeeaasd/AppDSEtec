@@ -10,7 +10,6 @@
                         FontFamily="EpilogueRegular" TextColor="#eee" FontSize="20" Margin="30"/>
                 <Label Text="Se você habilitou a internet, feche o app e abra novamente." HorizontalTextAlignment="Center"
                         FontFamily="EpilogueRegular" TextColor="#eee" FontSize="20" Margin="30"/>
-
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

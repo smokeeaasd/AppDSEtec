@@ -16,6 +16,17 @@
             </Setter>
         </Style>
 
+        <Style TargetType="ContentPage" x:Key="ContentGradientBG">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="1, 1" EndPoint="0, 0">
+                        <GradientStop Color="#13072E" Offset="0"/>
+                        <GradientStop Color="#4C2580" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor" Value="#521EB3"/>
             <Setter Property="BarTextColor" Value="#eee"/>
@@ -37,15 +48,21 @@
         </Style>
 
         <Style TargetType="Label" x:Key="LabelSubtitle">
-            <Setter Property="FontFamily" Value="UbuntuMedium"/>
+            <Setter Property="FontFamily" Value="EpilogueRegular"/>
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="TextColor" Value="#77bbff"/>
         </Style>
 
-        <Style TargetType="Label" x:Key="LabelAnimada">
+        <Style TargetType="Label" x:Key="WeatherTitle">
+            <Setter Property="TextColor" Value="#eee"/>
+            <Setter Property="FontSize" Value="30"/>
             <Setter Property="FontFamily" Value="UbuntuMedium"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="TextColor" Value="#eeeeee"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="WeatherStats">
+            <Setter Property="FontFamily" Value="EpilogueRegular"/>
+            <Setter Property="TextColor" Value="#eee"/>
+            <Setter Property="FontSize" Value="18"/>
         </Style>
     </Application.Resources>
 </Application>

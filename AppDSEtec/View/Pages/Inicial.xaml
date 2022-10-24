@@ -11,8 +11,18 @@
                    x:Name="lblTitulo"
                    Margin="20, 20, 0, 0"/>
             <Label Style="{StaticResource LabelSubtitle}"
-                    Text="um simples projeto do lucas :)"
+                    Text="um simples projeto mobile :)"
                     Margin="20, 0, 0, 0"/>
+            
+            <!-- Github -->
+            <Frame Margin="20" CornerRadius="10" BackgroundColor="#11ffffff">
+                <Grid ColumnDefinitions="*, *">
+                    <Label x:Name="lblUsername" Text="{Binding User}"
+                        Style="{StaticResource WeatherTitle}" Grid.Row="0" Grid.ColumnSpan="2"/>
+                    <Label Text="{Binding Followers}" TextColor="#eee" FontFamily="EpilogueRegular" FontSize="18" Grid.Row="1"/>
+                </Grid>
+            </Frame>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

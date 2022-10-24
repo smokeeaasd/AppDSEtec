@@ -10,31 +10,15 @@ namespace AppDSEtec
 {
     public partial class App : Application
     {
-        static LocationAlways locationAlways = new LocationAlways();
-        static LocationWhenInUse locationWhenInUse = new LocationWhenInUse();
-
-        static PermissionStatus locAlwaysStatus = locationAlways.CheckStatusAsync().Result;
-
-        static PermissionStatus locWhenInUseStatus = locationWhenInUse.CheckStatusAsync().Result;
-
         public App()
         {
             NetworkAccess networkAccess = Connectivity.NetworkAccess;
-
-            Geolocation.GetLocationAsync();
 
             InitializeComponent();
 
             if (networkAccess == NetworkAccess.Internet || networkAccess == NetworkAccess.ConstrainedInternet)
             {
-                if (locAlwaysStatus == PermissionStatus.Granted || locWhenInUseStatus == PermissionStatus.Granted)
-                {
-                    MainPage = new MainPage();
-                }
-                else
-                {
-                    MainPage = new NotAllowed();
-                }
+                MainPage = new NavigationPage(new SearchUser());
             }
             else
             {
@@ -57,18 +41,7 @@ namespace AppDSEtec
 
             Geolocation.GetLocationAsync();
 
-            if (networkAccess == NetworkAccess.Internet || networkAccess == NetworkAccess.ConstrainedInternet)
-            {
-                if (locAlwaysStatus == PermissionStatus.Granted || locWhenInUseStatus == PermissionStatus.Granted)
-                {
-                    MainPage = new MainPage();
-                }
-                else
-                {
-                    MainPage = new NotAllowed();
-                }
-            }
-            else
+            if (!(networkAccess == NetworkAccess.Internet || networkAccess == NetworkAccess.ConstrainedInternet))
             {
                 MainPage = new NotInternet();
             }
