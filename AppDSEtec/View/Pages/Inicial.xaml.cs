@@ -8,6 +8,7 @@ using System.Threading;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using AppDSEtec.Model;
 
 namespace AppDSEtec.View.Pages
 {
@@ -17,6 +18,8 @@ namespace AppDSEtec.View.Pages
         public Inicial()
         {
             InitializeComponent();
+
+            var location = Geolocation.GetLastKnownLocationAsync().Result;
 
             ushort horas = Convert.ToUInt16(DateTime.Now.Hour);
 
@@ -32,6 +35,22 @@ namespace AppDSEtec.View.Pages
             {
                 lblTitulo.Text = "Boa noite!";
             }
+
+            /*
+            Task.Run(async () =>
+            {
+                Weather clima = new Weather("0a36245bb1a30c1f0a1f2fe343a1401a");
+                
+                string lat = location.Latitude.ToString();
+                string lon = location.Longitude.ToString();
+
+                object res = await clima.GetWeather(lat, lon);
+
+                Device.BeginInvokeOnMainThread(() => {
+                    lblClima.Text = res.ToString();
+                });
+            });
+            */
         }
     }
 }

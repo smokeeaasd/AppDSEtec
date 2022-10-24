@@ -7,12 +7,16 @@
              BackgroundColor="Transparent">
     <ContentPage.Content>
         <StackLayout Style="{StaticResource GradientBG}">
-            <Label Style="{StaticResource LabelTitle}"
+                <Label Style="{StaticResource LabelTitle}"
                    x:Name="lblTitulo"
                    Margin="20, 20, 0, 0"/>
-            <Label Style="{StaticResource LabelSubtitle}"
+                <Label Style="{StaticResource LabelSubtitle}"
                     Text="um simples projeto do lucas :)"
                     Margin="20, 0, 0, 0"/>
-        </StackLayout>
+
+            <Grid>
+                
+            </Grid>
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>

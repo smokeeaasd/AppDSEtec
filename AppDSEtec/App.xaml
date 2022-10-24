@@ -41,5 +41,11 @@
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="TextColor" Value="#77bbff"/>
         </Style>
+
+        <Style TargetType="Label" x:Key="LabelAnimada">
+            <Setter Property="FontFamily" Value="UbuntuMedium"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextColor" Value="#eeeeee"/>
+        </Style>
     </Application.Resources>
 </Application>
