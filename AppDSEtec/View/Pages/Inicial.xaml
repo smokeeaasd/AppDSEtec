@@ -7,22 +7,36 @@
              BackgroundColor="Transparent">
     <ContentPage.Content>
         <StackLayout Style="{StaticResource GradientBG}">
-                <Label Style="{StaticResource LabelTitle}"
+            <Label Style="{StaticResource LabelTitle}"
                    x:Name="lblTitulo"
                    Margin="20, 20, 0, 0"/>
             <Label Style="{StaticResource LabelSubtitle}"
                     Text="um simples projeto mobile :)"
                     Margin="20, 0, 0, 0"/>
-            
+
             <!-- Github -->
             <Frame Margin="20" CornerRadius="10" BackgroundColor="#11ffffff">
-                <Grid ColumnDefinitions="*, *">
-                    <Label x:Name="lblUsername" Text="{Binding User}"
-                        Style="{StaticResource WeatherTitle}" Grid.Row="0" Grid.ColumnSpan="2"/>
-                    <Label Text="{Binding Followers}" TextColor="#eee" FontFamily="EpilogueRegular" FontSize="18" Grid.Row="1"/>
-                </Grid>
+                <StackLayout>
+                    <Label Text="{Binding User}"
+                        Style="{StaticResource WeatherTitle}" Grid.ColumnSpan="2"/>
+                    <Label Text="{Binding PublicRepos}"
+                           FontFamily="EpilogueRegular"
+                           Grid.ColumnSpan="2"
+                           TextColor="#eee"
+                           FontSize="16"
+                           Margin="0, 0, 15, 0"/>
+
+                    <Frame CornerRadius="20" VerticalOptions="Center" Padding="0" Margin="0" WidthRequest="100" HeightRequest="100" HorizontalOptions="Start">
+                        <Image Source="{Binding AvatarUrl}" Aspect="AspectFit" WidthRequest="100" HeightRequest="100" />
+                    </Frame>
+
+                    <Label Text="{Binding Followers}" TextColor="#eee" FontFamily="EpilogueRegular" FontSize="18"/>
+                    <Label Text="{Binding Following}" TextColor="#eee" FontFamily="EpilogueRegular" FontSize="18"/>
+
+                    <Label Text="{Binding JoinedAt, StringFormat='{}{0:dd/MM/yyyy}'}" TextColor="#eee" FontFamily="EpilogueRegular" FontSize="18" HorizontalTextAlignment="End" Margin="0, 20, 0, 0"/>
+                </StackLayout>
             </Frame>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

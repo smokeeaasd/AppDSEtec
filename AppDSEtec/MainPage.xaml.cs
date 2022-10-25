@@ -15,24 +15,6 @@ namespace AppDSEtec
         public MainPage()
         {
             InitializeComponent();
-
-            foreach (Xamarin.Forms.View view in flyout.InicialStackLayout.Children.ToList())
-            {
-                if (typeof(TargetButton) == view.GetType())
-                {
-                    TargetButton botao = (TargetButton)view;
-
-                    botao.Clicked += Page_Clicked;
-                }
-            }
-        }
-
-        private void Page_Clicked(object sender, EventArgs e)
-        {
-            TargetButton botao = (TargetButton)sender;
-
-            Detail = new NavigationPage((Page)Activator.CreateInstance(botao.TargetPage));
-            IsPresented = false;
         }
     }
 }

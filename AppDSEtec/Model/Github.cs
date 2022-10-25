@@ -34,5 +34,6 @@ namespace AppDSEtec.Model
         public string Following { get; set; }
         public string PublicRepos { get; set; }
         public string AvatarUrl { get; set; }
+        public string JoinedAt { get; set; }
     }
 }
